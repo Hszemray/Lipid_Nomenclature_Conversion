@@ -1,18 +1,18 @@
 # Lipid_Nomenclature_Conversion
 
-#Function Usage 
-# Load necessary library
+# Function Usage 
+#Load necessary library
 library(dplyr)
 
-# Source the function GitHub repository
+#Source the function GitHub repository
 source_url <- "https://raw.githubusercontent.com/Hszemray/Lipid_Nomenclature_Conversion/main/Nomenclature_UpdateR.R"
 source(source_url)
 
-# Load your data
+#Load your data
 Data <- read.csv("path_to_your_data.csv")
 
-# Call the function
+#Call the function
 Updated_Data <- Nomenclature_update(Data)
 
-# Save the updated data if needed
+#Save the updated data if needed
 write.csv(Updated_Data, "path_to_save_updated_data.csv", row.names = FALSE)
