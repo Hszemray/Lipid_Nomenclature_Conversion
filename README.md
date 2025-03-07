@@ -1,20 +1,39 @@
+---
+
 # Lipid_Nomenclature_Conversion
 
-# Usage 
-Copy and paste the following into your R script 
+This repository contains a function to update the nomenclature of lipid species in your dataset.
 
-#Load necessary library
-library(dplyr)
+## Usage
 
-#Source the function GitHub repository
-source_url <- "https://raw.githubusercontent.com/Hszemray/Lipid_Nomenclature_Conversion/main/Nomenclature_UpdateR.R"
-source(source_url)
+To use the function, follow these steps:
 
-#Load your data
-Data <- read.csv("path_to_your_data.csv")
+1. **Load the necessary library**:
+   ```r
+   library(dplyr)
+   ```
 
-#Call the function
-Updated_Data <- Nomenclature_update(Data)
+2. **Source the function from the GitHub repository**:
+   ```r
+   source_url <- "https://raw.githubusercontent.com/Hszemray/Lipid_Nomenclature_Conversion/main/Nomenclature_UpdateR.R"
+   source(source_url)
+   ```
 
-#Save the updated data if needed
-write.csv(Updated_Data, "path_to_save_updated_data.csv", row.names = FALSE)
+3. **Load your data**:
+   ```r
+   Data <- read.csv("path_to_your_data.csv")
+   ```
+
+4. **Call the function**:
+   ```r
+   Updated_Data <- Nomenclature_update(Data)
+   ```
+
+5. **Save the updated data if needed**:
+   ```r
+   write.csv(Updated_Data, "path_to_save_updated_data.csv", row.names = FALSE)
+   ```
+
+Replace `"path_to_your_data.csv"` with the path to your data file and `"path_to_save_updated_data.csv"` with the path where you want to save the updated data.
+
+---
