@@ -1,6 +1,6 @@
 # Lipid_Nomenclature_Conversion
 
-# Function Usage 
+# Usage 
 Copy and paste the following into your R script 
 
 #Load necessary library
