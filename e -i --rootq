@@ -1,0 +1,51 @@
+[33mae5179e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update Nomenclature_UpdateR.R
+[33m4a47604[m Refactor Nomenclature_update function
+[33m17edcd0[m Update read.csv to include check.names = FALSE
+[33m757d09c[m Update Nomenclature_UpdateR.R
+[33mffe82d4[m Update README.md
+[33m52716bd[m Remove check.names option from read.csv call
+[33mcb75eb2[m Enhance Nomenclature_update function with validation
+[33m592bddc[m Modify read.csv to set check.names to FALSE
+[33mc2bff31[m Update to download and then read
+[33mb4b832e[m Refactor nomenclature update function with package checks
+[33mb6ddf8f[m minor fix
+[33m6904a56[m Fix namespace issues
+[33mbc1e903[m delete test
+[33m45d306d[m update
+[33mdb5635c[m Add SM to key
+[33m06de51c[m Update
+[33mc1762ef[m revert
+[33m27343d6[m update
+[33mb3423e4[m update
+[33mc2da133[m add CE updates
+[33m6f47fa9[m Add formating for PC:0 and PC:P
+[33m05e0ca8[m update readme
+[33mb4ce8b8[m Merge branch 'main' of https://github.com/Hszemray/Lipid_Nomenclature_Conversion
+[33mbd93a15[m Add support for MS-LIPIDS-4
+[33ma6a2ac6[m Update README.md
+[33mc7dc867[m Update README.md
+[33md08efc7[m Update README.md
+[33m75961e7[m Update Nomenclature_UpdateR.R
+[33mbcc0f2d[m Update Nomenclature_UpdateR.R
+[33m85408de[m Update Nomenclature_UpdateR.R
+[33m062751b[m Update Nomenclature_UpdateR.R
+[33md221d91[m Update README.md
+[33mda5421b[m Update README.md
+[33ma7c099f[m Update README.md
+[33mcf821bd[m Update README.md
+[33m897e09a[m Update README.md
+[33m601c1af[m Update README.md
+[33ma69c2ce[m Update Nomenclature_UpdateR.R
+[33m344053d[m Update Nomenclature_UpdateR.R
+[33mf51da03[m Update Nomenclature_UpdateR.R
+[33m770a4f4[m Update README.md
+[33m690db75[m Update README.md
+[33ma906cac[m Update README.md
+[33mea62dad[m Update README.md
+[33m91a8e51[m Update README.md
+[33m9c6ea75[m Update README.md
+[33mdde72fa[m Update README.md
+[33mde3e7b0[m Update README.md
+[33m384c4db[m Add files via upload
+[33m4eb9197[m Add nomenclature conversion key
+[33m9ec4a04[m Initial commit
