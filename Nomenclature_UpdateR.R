@@ -1,7 +1,5 @@
 library(dplyr)
 
-Data <- Master_Lipid
-
 # Function to update nomenclature of lipid species
 Nomenclature_update <- function(Data) {
   
@@ -31,6 +29,3 @@ Nomenclature_update <- function(Data) {
   })
   return(Data)
 }
-
-# Usage 
-Test <- Nomenclature_update(Data)
