@@ -4,7 +4,7 @@ library(dplyr)
 Nomenclature_update <- function(Data) {
   
   # Load Nomenclature Key
-  Nomenclature_key <- read.csv("https://raw.githubusercontent.com/Hszemray/Lipid_Nomenclature_Conversion/main/lipid_nomenclature_conversion_v2.csv") # CSV containing old names and new names
+  Nomenclature_key <- read.csv("https://raw.githubusercontent.com/Hszemray/Lipid_Nomenclature_Conversion/main/lipid_nomenclature_conversion_v2.csv", check.names = FALSE) # CSV containing old names and new names
   
   # Create named vector for nomenclature mapping
   nomenclature_map <- setNames(Nomenclature_key$updated_precursor_name, Nomenclature_key$precursor_name)
