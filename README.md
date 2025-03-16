@@ -21,7 +21,7 @@ To use the function, follow these steps:
 
 3. **Load your data**:
    ```r
-   Data <- read.csv("path_to_your_data.csv")
+   Data <- read.csv("path_to_your_data.csv", check.names = FALSE)
    ```
 
 4. **Call the function**:
