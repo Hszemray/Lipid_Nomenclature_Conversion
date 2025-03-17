@@ -4,7 +4,7 @@
 
 This repository contains a function to update the nomenclature of lipid species in your dataset.
 
-Many thnaks to Alanah Grant-St James for providing the nomenclature key. 
+Many thanks to Alanah Grant-St James for providing the nomenclature key. 
 
 ## Usage
 
