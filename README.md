@@ -2,7 +2,7 @@
 
 # Lipid_Nomenclature_Conversion
 
-This repository contains a function to update the nomenclature of lipid species in your dataset.
+This repository contains a function to update the nomenclature of lipid species in your dataset for the ANPC targeted lipid method
 
 Many thanks to Alanah Grant-St James for providing the nomenclature key. 
 
