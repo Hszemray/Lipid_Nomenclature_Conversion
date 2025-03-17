@@ -14,10 +14,14 @@ Nomenclature_update <- function(Data) {
   
   colnames(Data) <- sapply(colnames(Data), function(Formatting) {
     if (any(sapply(Target_Columns, function(target) startsWith(Formatting, target)))) {
-      Formatting <- gsub(".", ":", sub(".$", ")", sub(".", "(", Formatting, fixed = TRUE)), fixed = TRUE)
+        if (startsWith(Formatting, "PE.P") || startsWith(Formatting, "PE.O")) {
+            Formatting <- gsub("\\.", ":", sub("\\.$", ")", sub("\\.", "(", sub("^.", "-", Formatting, fixed = TRUE)), fixed = TRUE), fixed = TRUE)
+        } else {
+            Formatting <- gsub("\\.", ":", sub("\\.$", ")", sub("\\.", "(", Formatting, fixed = TRUE)), fixed = TRUE)
+        }
     }
     return(Formatting)
-  })
+})
   
   # Update Nomenclature
   colnames(Data) <- sapply(colnames(Data), function(nomenclature) {
