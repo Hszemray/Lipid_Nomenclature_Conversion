@@ -18,7 +18,7 @@ To use the function, follow these steps
    source(source_url)
 
    # Load your data
-   Data <- read.csv("path_to_your_data.csv", check.names = FALSE)
+   Data <- read.csv("path_to_your_data.csv")
 
    # Call the function:
    Updated_Data <- Nomenclature_update(Data)
