@@ -9,9 +9,6 @@ Nomenclature_update <- function(Data) {
   # Create named vector for nomenclature mapping
   nomenclature_map <- setNames(Nomenclature_key$updated_precursor_name, Nomenclature_key$precursor_name)
   
-  
-  #Check if formating of colnames is X.X.X or C(X:X)
-  
     ## Ensure formatting of species is correct
     Target_Columns <- c("CE", "CER", "MAG", "DAG", "FFA", "LCER", "HCER", "LPC", "LPE", "LPI", "LPG", "LPS", "PE", "PC", "PS", "PG", "PI", "SM", "TAG", "DCER")
     colnames(Data) <- sapply(colnames(Data), function(Formatting) {
