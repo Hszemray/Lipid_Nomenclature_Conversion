@@ -9,20 +9,26 @@ Nomenclature_update <- function(Data) {
   # Create named vector for nomenclature mapping
   nomenclature_map <- setNames(Nomenclature_key$updated_precursor_name, Nomenclature_key$precursor_name)
   
-  # Ensure formatting of species is correct
-  Target_Columns <- c("CE", "CER", "MAG", "DAG", "FFA", "LCER", "HCER", "LPC", "LPE", "LPI", "LPG", "LPS", "PE", "PC", "PS", "PG", "PI", "SM", "TAG", "DCER")
   
-  colnames(Data) <- sapply(colnames(Data), function(Formatting) {
-    if (any(sapply(Target_Columns, function(target) startsWith(Formatting, target)))) {
-        if (startsWith(Formatting, "PE.P") || startsWith(Formatting, "PE.O")) {
-            Formatting <- gsub("\\.", ":", sub("\\.$", ")", sub("\\.", "(", sub("^.", "-", Formatting, fixed = TRUE)), fixed = TRUE), fixed = TRUE)
-        } else {
-            Formatting <- gsub("\\.", ":", sub("\\.$", ")", sub("\\.", "(", Formatting, fixed = TRUE)), fixed = TRUE)
+  #Check if formating of colnames is X.X.X or C(X:X)
+  
+    ## Ensure formatting of species is correct
+    Target_Columns <- c("CE", "CER", "MAG", "DAG", "FFA", "LCER", "HCER", "LPC", "LPE", "LPI", "LPG", "LPS", "PE", "PC", "PS", "PG", "PI", "SM", "TAG", "DCER")
+    colnames(Data) <- sapply(colnames(Data), function(Formatting) {
+      if (any(sapply(Target_Columns, function(target) startsWith(Formatting, target)))) {
+        if (grepl("\\.", Formatting)) {
+          Formatting <- gsub("\\.", ":", Formatting)
+          if (startsWith(Formatting, "PE:P") || startsWith(Formatting, "PE:O")) {
+            Formatting <- sub("^PE:P:", "PE:P-", Formatting)
+            Formatting <- sub("^PE:O:", "PE:O-", Formatting)
+          }
+          Formatting <- sub("\\:$", ")", Formatting)
+          Formatting <- sub(":", "(", Formatting, fixed = TRUE)
         }
-    }
-    return(Formatting)
-})
-  
+      }
+      return(Formatting)
+    })
+    
   # Update Nomenclature
   colnames(Data) <- sapply(colnames(Data), function(nomenclature) {
     if (nomenclature %in% names(nomenclature_map)) {
